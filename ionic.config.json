@@ -1,0 +1,7 @@
+{
+  "name": "appPedido",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
