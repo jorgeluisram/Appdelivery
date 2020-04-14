@@ -1,11 +1,31 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
     <ion-title>
-      Blank
+      Inicio 
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
+
+<ion-menu side="start" menuId="first" contentId="main">
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Start Menu</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-list>
+    <ion-item>Menu Item</ion-item>
+    <ion-item>Menu Item</ion-item>
+    <ion-item>Menu Item</ion-item>
+    <ion-item>Menu Item</ion-item>
+    <ion-item>Menu Item</ion-item>
+  </ion-list>
+</ion-content>
+</ion-menu>
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
@@ -18,3 +38,4 @@
     <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
   </div>
 </ion-content>
+<ion-router-outlet id="main"></ion-router-outlet>
