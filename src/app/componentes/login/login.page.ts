@@ -4,6 +4,7 @@ import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { AuthService } from '../../service/auth.service';
 import { Router } from '@angular/router';
+import { AlertController } from '@ionic/angular';
 
 @Component({
   selector: 'app-login',
@@ -22,7 +23,8 @@ export class LoginPage implements OnInit {
     private splashScreen: SplashScreen,
     private statusBar: StatusBar,
     public authService: AuthService,
-    private router: Router
+    private router: Router,
+    public alertController: AlertController
   ) {
     this.initializeApp();
   }
@@ -40,15 +42,27 @@ export class LoginPage implements OnInit {
     let user = this.authService.signup(this.email, this.password);
     this.email = this.password = '';
   }
+  async presentAlert() {
+    const alert = await this.alertController.create({
+      header: 'Contraseña incorrecta',
+      subHeader: '',
+      message: 'Por favor intenta de nuevo.',
+      buttons: ['Cerrar']
+    });
 
+    await alert.present();
+  }
   login() {
     this.authService.login(this.email, this.password)
     .then(user => {
       console.log("Go to another page");
       this.router.navigate(['/home']);
     }).catch(error => {
+        
       
       console.log("stop at login");
+      this.presentAlert()
+      
     })
     this.email = this.password = '';
   }

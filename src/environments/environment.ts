@@ -5,13 +5,14 @@
 export const environment = {
   production: false,
   firebase: {
-    apiKey: "AIzaSyAJWdFGtsaldfgaXMxCi7YsPLVCsz_36s8",
-    authDomain: "jorgi-app.firebaseapp.com",
-    databaseURL: "https://jorgi-app.firebaseio.com",
-    projectId: "jorgi-app",
-    storageBucket: "jorgi-app.appspot.com",
-    messagingSenderId: "324176836102",
-    appId: "1:324176836102:web:8e82fc767dea194e"
+    apiKey: "AIzaSyBdcxUyKmBwtPIZ3ZmtGuZNSt7gDdG1ww4",
+    authDomain: "pedido-c14b6.firebaseapp.com",
+    databaseURL: "https://pedido-c14b6.firebaseio.com",
+    projectId: "pedido-c14b6",
+    storageBucket: "pedido-c14b6.appspot.com",
+    messagingSenderId: "944243823297",
+    appId: "1:944243823297:web:4a64a5fbede0ee938efa40",
+    measurementId: "G-PT2962NZWW"
   }
 };
 
