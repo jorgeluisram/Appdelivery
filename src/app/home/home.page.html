@@ -1,11 +1,10 @@
+<ion-router-outlet id="main"></ion-router-outlet>
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title>
-      Inicio 
-    </ion-title>
+    <ion-title size="large">Blank</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -25,15 +24,8 @@
   </ion-list>
 </ion-content>
 </ion-menu>
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-<app-user></app-user>
 
-  <div id="container">
-    <ion-button (click)="asd()" expand="full" color="secondary">A full-width button</ion-button>  </div>
+
+<ion-content [fullscreen]="true">
+  <app-homepage></app-homepage>
 </ion-content>
-<ion-router-outlet id="main"></ion-router-outlet>
