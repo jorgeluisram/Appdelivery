@@ -17,7 +17,7 @@ export class HomePage {
       this.authService.logout();
       this.router.navigate(['/login']);
     }
-    ads(){debugger}
+    ads = () => {console.log('Pressed')}
 
 
 
